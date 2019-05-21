@@ -1,0 +1,25 @@
+server:
+  port: 8080
+#    servlet:
+#      context-path: /api
+spring:
+  data:
+    rest:
+      base-path: /api
+#logging:
+#  level: DEBUG
+---
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:postgresql://ec2-54-247-70-127.eu-west-1.compute.amazonaws.com:5432/d17ndskpuv14oc
+    username: zrqiiixdhrwyzn
+    password: 79671d1aa05af4d487030044b8dd2073b097f2c307fbef99d29e19c9571c8ba4
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # Hibernate ddl auto (create, create-drop, validate, update)
+        ddl-auto: update
